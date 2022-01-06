@@ -58,8 +58,8 @@ const UserInfo = () => {
             );
           }
 
-          const { fullName } = data.me;
-          return <div className={cs.info}>Hello, {fullName}!</div>;
+          //const { fullName } = data.me.firstName;
+          return <div className={cs.info}>Hello, {data.me.firstName}!</div>;
         }}
       </Query>
     </div>
