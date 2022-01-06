@@ -16,14 +16,14 @@ const ProcessItemForm = ({
     <div className={cs.form}>
       <input
         type="text"
-        placeholder="title"
+        placeholder="Title"
         value={title}
         className={cs.input}
         onChange={e => setTitle(e.currentTarget.value)}
       />
       <input
-        type="text"
-        placeholder="description"
+        type="text"app/javascript/components/UpdateItemForm
+        placeholder="Description"
         value={description}
         className={cs.input}
         onChange={e => setDescription(e.currentTarget.value)}
@@ -31,7 +31,7 @@ const ProcessItemForm = ({
 
       <input
         type="text"
-        placeholder="url"
+        placeholder="Image URL"
         value={imageUrl}
         className={cs.input}
         onChange={e => setImageUrl(e.currentTarget.value)}
