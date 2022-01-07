@@ -22,7 +22,7 @@ const UserInfo = () => {
                   });
                 }}
               >
-                {(signIn, { loading: authenticating }) =>
+                {(signIn, { loading: authenticating, error }) =>
                   authenticating ? (
                     '...'
                   ) : (
@@ -50,6 +50,7 @@ const UserInfo = () => {
                           className={cs.button}
                           value="Sign In"
                         />
+                        {error && <span>{error.message}</span>}
                       </form>
                     </div>
                   )
@@ -58,7 +59,6 @@ const UserInfo = () => {
             );
           }
 
-          //const { fullName } = data.me.firstName;
           return <div className={cs.info}>Hello, {data.me.firstName}!</div>;
         }}
       </Query>
